@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //conditional or ternary operator(?!)
+
+        // simple program
+
+        // const age=15;
+        // const result=age>=18?"Eligible":"Not Eligible";
+        // console.log(result);
+
+        //  const age=22;
+        // const result=age>=18?"Eligible":"Not Eligible";
+        // console.log(result);
+
+        //Handling null values
+
+        // function welcome(name){
+        //     console.log("welcome"+name);
+        // }
+        // welcome();                             //output:undefined
+
+
+        //  function welcome(name){
+        //     console.log("welcome"+name);
+        // }
+        // welcome(null); //output:welcome null
+
+
+        // function welcome(name){
+        //     const result=name?name:"No Name";
+        //     console.log("welcome "+result);
+        // }
+        // welcome(null);                             //output:welcome No name;
+
+
+        // function welcome (name){
+        //     const result=name?name:"No Name";
+        //     console.log("welcome "+result);
+        // }
+        // welcome(sriram);                             //output:welcome sriram 
+
+        //object:
+
+         user={'name':'sriram','age':21};
+         console.log(user);
+         console.log(user.name);
+
+
+        //function
+
+        // const greeting=()=>{
+        //     return "hello world";                     //output:hello world
+        // }
+        // console.log(greeting())
+
+
+        const greeting=(user)=>{
+            const name=user?user.name:"No Name";
+            return "hello"+name;                     //output:hello world
+        }
+        console.log(greeting(user));
+
+
+        //condition chains
+ 
+        /*
+        avg>90 A grade
+        avg>=80 B grade
+        c grade
+        */
+
+        const avg=62;
+        const grade=avg>=90? "A Grade":avg>=80? "B Grade":"C Grade";
+        console.log("Grade:",grade);
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
