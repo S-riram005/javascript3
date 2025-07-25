@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        //arrowfunction
+        //const function name=(parameters)=>{function body};
+        const add=(a,b)=>{return a+b};
+        console.log(add);
+        console.log(add(25,25));
+
+        //arrow function with map()
+        let numbers=[1,2,3,4,5];
+        let doubledNumber=numbers.map(number=>number*2);
+        console.log(doubledNumber);
+
+        //using arrow function with filter
+
+        let words=['apple','mango','banana','orange','grape'];
+        let filteredWords=words.filter(word=>word.length>5);
+        console.log(filteredWords);
+
+        //using arrow function with reduce
+        console.log(numbers);
+        let total=numbers.reduce((sum,number)=>sum+number,0);
+        console.log(total);
+
+        //using arrow function to creat a closure:
+        let createCounter=()=>{
+        let count=0;
+        return()=>{
+            count++;
+        return count;
+        }
+    }
+    let counter=createCounter();
+    console.log(counter);
+    console.log(counter());
+    console.log(counter());
+    console.log(counter());
+    
+    
+
+
+    </Script>
+    
+</body>
+</html>
