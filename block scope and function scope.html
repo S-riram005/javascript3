@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // if(true){
+        //     let blockScopeVariable='I am a varaiable with block scope';
+        //     console.log(blockScopeVariable);
+        // }
+        // console.log(blockScopeVariable);
+
+        function myfunction(){
+            var functionScopeVariable='I am a varaiable with block scope';
+            console.log(functionScopeVariable);
+            function add(){
+                console.log(functionScopeVariable);
+            }
+            add()
+            
+
+        }
+        myfunction();   
+            </script>
+    
+</body>
+</html>
