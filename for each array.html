@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        const number=[1,2,3,4,5,6,7,8,9,10];
+        number.forEach((value)=>{
+            console.log(value)
+        });
+
+        number.forEach((value,index)=>{
+            console.log("Index: "+index+" "+"Value: "+value);
+        });
+
+        const user=[
+            {full_name:"sriram",age:21,city:"madurai",salary:100000},
+            {full_name:"tharun",age:23,city:"nammakal",salary:10500},
+            {full_name:"kubesh",age:20,city:"salem",salary:12000},
+            {full_name:"surya",age:19,city:"chennai",salary:6000},
+            {full_name:"santhosh",age:25,city:"athipattu",salary:50000},
+        ];
+        user.forEach((value)=>{
+            console.log(value.full_name);
+        });
+    </Script>
+    
+</body>
+</html>
