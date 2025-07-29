@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        splice is a remove the element in array it will change the original array
+        removed_element=splice(start,length,new elements)
+        */
+       const n1=[1,2,3,4,5,6,7,8,9,10];
+       console.log("Before splice: "+n1);
+       let removed_element=n1.splice(2);
+       console.log("Removed element: "+removed_element);
+       console.log("After splice: "+n1);
+
+       const n2=[1,2,3,4,5,6,7,8,9,10];
+       console.log("before splice: "+n2);
+       removed_element=n2.splice(2,2);
+       console.log("removed element: "+removed_element);
+       console.log("after splice: "+n2);
+       
+
+       const n3=[1,2,3,4,5,6,7,8,9,10];
+       console.log("before splice: "+n3);
+    //    removed_element=n3.splice(2,2,42,56);
+    //    console.log("removed element: "+removed_element);
+    //    console.log("after splice: "+n3);
+
+       removed_element=n3.splice(2,2,[42,56,62]);
+       console.log("removed element: "+removed_element);
+       console.log(n3);
+
+       const n4=[1,2,3,4,5,6,7,8,9,10];
+       console.log("before splice: "+n4);
+       n4.splice(2,0,100,300);
+       console.log("after splice: "+n4);
+
+    </script>
+    
+</body>
+</html>
