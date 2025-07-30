@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        //spread operator
+         let originalArray=[1,2,3];
+        // let clonedArray=[...originalArray];
+        // console.log( clonedArray);
+        //splice operator
+        // let clonedArray=originalArray.slice();
+        // console.log(clonedArray);
+        //concat
+        // let clonedArray=[].concat(originalArray);
+        // console.log(clonedArray);
+        //Array.from()
+        // let clonedArray=Array.from(originalArray);
+        // console.log(clonedArray);
+        //json.parse(),json.stringify()
+        let clonedArray=JSON.parse(JSON.stringify(originalArray));
+        console.log(clonedArray);
+
+
+    </Script>
+    
+</body>
+</html>
