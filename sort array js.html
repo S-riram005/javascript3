@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+
+        const names=["sriram","zega","mukesh","guru","rishi"];
+        console.log("Before Sort: "+names);
+        names.sort();
+        console.log("After Sort: "+names);
+
+        const num=[10,100,25,150,45,80,9];
+        console.log("Before Sort: "+num);
+        num.sort();
+        console.log("After Sort: "+num);
+
+        num.sort((a,b)=>{
+            return a-b;
+        });
+        console.log("Asc Compare Sort: "+num);
+
+        num.sort((a,b)=>{
+            return b-a;
+        })
+        console.log("asc compare sort: "+num);
+
+        </script>
+
+    
+</body>
+</html>
