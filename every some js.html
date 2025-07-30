@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // n=[10,20,30,40];
+        // let result=n.every((value)=>{
+        //     return value%2==0;
+        // })
+        // console.log("All are elements are even: "+result);
+
+        // n=[10,20,11,40];
+        //  result=n.every((value)=>{
+        //     return value%2==0;
+        // })
+        // console.log("All are elements are even: "+result);
+
+        // n=[10,23,11,43];
+        //  result=n.some((value)=>{
+        //     return value%2==0;
+        // })
+        // console.log("All are elements are even: "+result);
+
+        // n=[10,23,11,43];
+        //  result=n.some((value)=>{
+        //     return value%2==0;
+        // })
+        // console.log("All are elements are even: "+result);
+
+         n=[10,12,16,20];
+
+        function checkEven(value){
+            return value % 2 == 0;
+        }
+        result=n.every(checkEven);
+        console.log("All are Elements are even: "+result);
+
+        n=[10,7,16,20];
+
+        function checkEven(value){
+            return value % 2 == 0;
+        }
+        result=n.some(checkEven);
+        console.log("All are Elements are even: "+result);
+
+        const user=[
+            {name:"sriram",age:21},
+            {name:"rishi",age:23},
+            {name:"raghul",age:24},
+            {name:"viswa",age:17},
+        ];
+        function isEligible(element){
+        return element.age>=18;
+        }
+        result=user.every(isEligible);
+        console.log(result);
+
+         result=user.some(isEligible);
+        console.log(result);
+    </script>
+
+    
+</body>
+</html
