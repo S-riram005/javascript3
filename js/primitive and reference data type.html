@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //primitive and reference data type
+        let name="sriram";
+        console.log(typeof name);
+        let age=21;
+        console.log(typeof age);
+        let isStudent=true;
+        console.log(typeof isStudent);
+        let x;
+        console.log(typeof x);
+        let id = Symbol();
+        console.log(typeof id); // Output: "symbol"
+
+        let a=10;
+        let b=10;
+        console.log("A: "+a);
+        console.log("B: "+b);
+        a=25;
+        console.log("A: "+a);
+        console.log("B: "+b);
+
+
+        //reference type
+        //object
+        let user={name:"sriram",age:21};
+        let user2=user;
+        console.log("User1: ",user);
+        console.log("User2: ",user2);
+        user.age=25;
+        console.log("User1: ",user);
+        console.log("User2: ",user2);
+
+        //Array
+        let arr1=[10,20,30];
+        let arr2=arr1;
+        console.log("Array1: ",arr1);
+        console.log("Array2: ",arr2);
+        arr1.push(40);
+        console.log("Array1: ",arr1);
+        console.log("Array2: ",arr2);
+
+        //object clone use spread and object assign()in javascript:
+
+        const obj1={a:1,b:2};
+        const obj2={c:3,d:4};
+        //const obj3=Object.assign({},obj1,obj2);
+        const obj3={...obj1,...obj2};
+        
+        console.log(obj3);
+        
+
+
+
+    </script>
+    
+</body>
+</html
