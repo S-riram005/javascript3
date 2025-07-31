@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        //map in js
+        //simple transformation
+        // const numbers=[1,2,3,4,5];
+        // const doubledNumbers=numbers.map(number=>number*2);
+        // console.log(doubledNumbers);
+        /*
+        original array.map(current_value,index,original Array);
+        */
+       //Modifying Array Elements
+    //    const words=["Hello","World"];
+    //    console.log(words);
+    //    const capitalizedWord=words.map(word=>word.toUpperCase
+    //    ());
+    //    console.log(capitalizedWord);
+
+       //combing arrays:
+       const fruits=["apple","orange"];
+       const colors=["red","yellow"];
+       const fruitcolor=fruits.map((fruits,index)=>fruits+"-"+colors[index]);
+       console.log(fruitcolor);
+
+       //4.filtering an array
+       const numbers=[1,2,3,4,5];
+       const evennumbers=numbers.map(num=>num%2===0);
+       console.log(evennumbers);
+
+       //5.Extracting properties from an Array of Objects
+       const users=[
+        {name:"sriram" ,age:21},
+        {name:"rishi" ,age:22},
+        {name:"viswa" ,age:23},
+       ];
+       const names=users.map(users=>users.name);
+       console.log(names);
+
+       //modifying Array objects:
+
+       console.log(users);
+
+       const updatedUsers=users.map(users=>{
+        return{
+            name:users.name,
+            age:users.age+1,
+        }
+       });
+       console.log(updatedUsers);
+
+       const words=['apple','banana','orange'];
+       const wordStats=words.map(function(currentValue,index,array){
+        return{
+            words:currentValue,
+            length:currentValue.length,
+            position:index,
+            totalWords:array.length,
+
+        };
+
+       });
+       console.log(wordStats);
+
+
+
+
+    </Script>
+    
+</body>
+</html>
