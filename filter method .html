@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers=[10,2,3,4,5,6,7,8,9,10];
+        let evenNumbers=numbers.filter(number=>number%2==0);
+        console.log(evenNumbers);
+
+        let users=[
+            {name:"sriram",age:23},
+            {name:"rishi",age:32},
+            {name:"viswa",age:34},
+        ];
+        let eligible=users.filter(user=>user.age>30);
+        console.log(eligible);
+
+        // let words=['cat','dog','elephant','fish','giraffe'];
+        // let wordsWithFourLetters=words.filter(word=>word.length===4);
+        // console.log(wordsWithFourLetters);
+
+        let items = [
+    { name: "apple", category: "fruit" },
+    { name: "carrot", category: "vegetable" },
+    { name: "banana", category: "fruit" },
+];
+
+let fruits = items.filter(item => item.category === "fruit");
+
+console.log(fruits);
+
+
+        let words=['cat','dog','elephant','fish','giraffe','eagle'];
+        let wordsStartsWithE=words.filter(word=>word.startsWith('e'));
+        console.log(wordsStartsWithE);
+
+
+        const products=[
+            { name: "Apple", category: "fruit",price:100 },
+            { name: "Carrot", category: "vegetable",price:50 },
+            { name: "Orange", category: "fruit",price:120 },
+            { name: "Broccoli", category: "vegetable",price:75},
+            { name: "Mango", category: "fruit",price:110},
+        ];
+        const expensiveFruits=products.filter(product=>product.category==="fruit"&&product.price>=100);
+        console.log(expensiveFruits);
+
+
+        let books = [
+  { title: 'Eloquent JavaScript', author: 'Marijn Haverbeke', year: 2011 },
+  { title: 'JavaScript: The Good Parts', author: 'Douglas Crockford', year: 2008 },
+  { title: 'Learning Web Design: A Beginner\'s Guide to HTML, CSS, JavaScript, and Web Graphics', author: 'Jennifer Niederst Robbins', year: 2012 },
+  { title: 'HTML and CSS: Design and Build Websites', author: 'Jon Duckett', year: 2011 },
+  { title: 'CSS Secrets: Better Solutions to Everyday Web Design Problems', author: 'Lea Verou', year: 2015 },
+  { title: 'JavaScript and JQuery: Interactive Front-End Web Development', author: 'Jon Duckett', year: 2014 },
+  { title: 'You Don\'t Know JS', author: 'Kyle Simpson', year: '2014-2019' },
+  { title: 'React: Up & Running', author: 'Stoyan Stefanov', year: 2016 },
+  { title: 'Node.js Design Patterns', author: 'Mario Casciaro', year: 2014 },
+  { title: 'Head First Design Patterns', author: 'Eric Freeman and Elisabeth Robson', year: 2004 }
+];
+
+const searchTerm = 'HTML'.toLowerCase();
+const year = 2011;
+
+const filteredBooks = books.filter(book => {
+  return book.title.toLowerCase().includes(searchTerm) || book.year === year;
+});
+
+console.log(filteredBooks);
+
+
+
+
+        
+    </script>
+    
+</body>
+</html>
