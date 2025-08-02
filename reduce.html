@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //reduce()in javascript
+        /*
+        array.reduce(function(accumulator,currentvalue,currentindex,array,initalvalue))
+    };
+    */
+//    let numbers=[1,2,3,4,5];
+//    let sum=numbers.reduce((accmulator,currentvalue)=>accmulator+currentvalue);
+//    console.log(sum);
+
+//    let nestedArray=[[1,2],[3,4],[5,6]];
+//    let flattenedArray=nestedArray.reduce((accmulator,currentvalue)=>accmulator.concat(currentvalue));
+//    console.log(flattenedArray);
+
+//    let colors=['red','blue','green','red','blue','yellow'];
+//    let colorcounts=colors.reduce((accmulator,currentvalue)=>{
+//     if(currentvalue in accmulator){
+//         accmulator[currentvalue]++;
+//     }else{
+//         accmulator[currentvalue]=1;
+//     }
+//     return accmulator;
+//    },{});
+//    console.log(colorcounts);
+
+//    let numbers=[55,10,15,20,25];
+//    let largest=numbers.reduce((accmulator,currentvalue)=>{
+//     return Math.max(accmulator,currentvalue);
+//    });
+//    console.log(largest);
+
+   let people = [
+    { name: "sriram", age: 21, city: "madurai" },
+    { name: "surya", age: 22, city: "chennai" },
+    { name: "santhosh", age: 24, city: "chennai" },
+];
+
+let groupedByCity = people.reduce((accumulator, currentValue) => {
+    if (currentValue.city in accumulator) {
+        accumulator[currentValue.city].push(currentValue); 
+    } else {
+        accumulator[currentValue.city] = [currentValue];
+    }
+    return accumulator;
+}, {});
+
+console.log(groupedByCity);
+
+
+
+    </script>
+    
+</body>
+</html> 
