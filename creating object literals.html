@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        //1.using object literals:
+        // const person={
+        //     name:"sriram",
+        //     age:23,
+        //     job:"mern stack developer",
+        // };
+        //console.log(person);
+
+        //2.using the object constructor:
+        // const person=new Object();
+        // person.name="sriram";
+        // person.age=23;
+        // person.job="mern stack developer";
+        // console.log(person);
+
+        //3.using the object.create()method:
+        //object.create(prototype,propertiesObject);
+
+        // const personProto={
+        //     sayHello:function(){
+        //         console.log(`Hello, my name is ${this.name}`);
+
+
+        //     }
+        // }
+        // const person=Object.create(personProto);
+        // person.name="sriram";
+        // person.age=23;
+        // person.job="mern stack developer";
+        // console.log(person);
+        // console.log(person.sayHello());
+
+        //using class:
+
+        class Person
+        {
+            constructor(name,age,job){
+                this.name=name;
+                this.age=age;
+                this.job=job;
+            }
+        }
+        const person=new Person("sriram",23,"mern stack devloper");
+        console.log(person);
+
+
+        
+    </Script>
+    
+</body>
+</html>
