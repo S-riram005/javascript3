@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        object literals
+        const student={
+            fullName:"sriram",
+            father:"Rajkumar",
+            age:22,
+            address:"Annanagar",
+            city:"madurai",
+            about:function(){
+                return `${this.fullName} is from ${this.city}`;
+            },
+            eligiblity:function(){
+            return this.age>18;
+            },
+
+        };
+
+   console.log(student); 
+   console.log(student.about()); 
+   console.log(student.eligiblity());
+
+   factory function
+
+   //program 2
+   function addStudent(fullName,father,age,address,city){
+    const users={};
+    users.fullName=fullName;
+    users.father=father;
+    users.age=age;
+    users.address=address;
+    users.city=city;
+    users.about=function(){
+                return `${this.fullName} is from ${this.city}`;
+            };
+    users.eligiblity=function(){
+            return this.age>18;
+            };
+            return users;
+   };
+   console.log(addStudent("sriram","Rajkmar",22,"annanagar","madurai"));
+   console.log(addStudent("rishi","paraman",22,"bbkulam","madurai"));
+   console.log(addStudent("viswa","anand",22,"periyar","madurai"));
+   console.log(addStudent("raghul","sridhar",22,"theppakulam","madurai"));
+   */
+
+//reference type  prototype inheritance
+//    const studentMethod={
+//     about:function(){
+//                 return `${this.fullName} is from ${this.city}`;
+//             },
+//             eligiblity:function(){
+//             return this.age>18;
+//             },
+//    }
+
+//    function addStudent(fullName,father,age,address,city){
+//     const users={};
+//     users.fullName=fullName;
+//     users.father=father;
+//     users.age=age;
+//     users.address=address;
+//     users.city=city;
+//     users.about=studentMethod.about;
+//     users.eligiblity=studentMethod.eligiblity;
+
+    
+//             return users;
+//    };
+//    console.log(addStudent("sriram","Rajkmar",22,"annanagar","madurai"));
+
+   const studentMethod = {
+    about: function () {
+        return `${this.fullName} is from ${this.city}`;
+    },
+    eligiblity: function () {
+        return this.age > 18;
+    },
+};
+
+function addStudent(fullName, father, age, address, city) {
+    const users = Object.create(studentMethod);
+    users.fullName = fullName;
+    users.father = father;
+    users.age = age;
+    users.address = address;
+    users.city = city;
+
+    return users;
+}
+
+const student = addStudent("Sriram", "Rajkumar", 22, "Annanagar", "Madurai");
+
+console.log(student);                 // Object with properties + prototype methods
+console.log(student.about());        // "Sriram is from Madurai"
+console.log(student.eligiblity());   // true
+
+    </script>
+    
+</body>
+</html>
