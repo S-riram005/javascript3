@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //object inside array in js
+        const users=[
+            {name:'sriram',age:22,email:'sriramrajkumar87@gmail.com'},
+            {name:'rishi',age:32,email:'rishisangi5@gmail.com'},
+            {name:'sriram',age:40,email:'raghul5@gamil.com'},
+        ];
+        //console.log(users);
+        for(const user of users){
+            //console.log(user);
+            console.log(user.email);
+
+        }
+
+        const olderUsers=users.filter(user=>user.age>30);
+        console.log(olderUsers);
+    </script>
+    
+</body>
+</html>
