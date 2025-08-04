@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function sayHello({name,age}){
+        //     console.log(`Hello,${name}!`);
+        //     console.log(`age is,${age}`);
+        // }
+        // const person={name:'sriram',age:23};
+        // sayHello(person);
+        
+        // function sayHello({name,age=25}){
+        //     console.log(`Hello,${name}!`);
+        //     console.log(`age is,${age}`);
+        // }
+        // const person={name:'sriram',};         //output:25
+        // sayHello(person);
+
+        // function sayHello({name,age=25}){
+        //     console.log(`Hello,${name}!`);
+        //     console.log(`age is,${age}`);
+        // }
+        // const person={name:'sriram',age:32};         //output:32 it is parameters destrucing
+        // sayHello(person);
+        // //arrays
+        // const numbers=[5,5,5];
+        // function add([a,b,c]){
+        //     return a+b+c;
+        // }
+        // console.log(add(numbers));
+
+        const person={name:'sriram',age:23,city:'madurai',country:'India'};
+        function sayHello({name,age,...rest}){
+            console.log(`Hello, ${name}! you are ${age} years are old`);
+            console.log(rest);
+        };
+        sayHello(person);
+
+
+    </script>
+    
+</body>
+</html>
