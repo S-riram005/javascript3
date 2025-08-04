@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // //user the for-in loop
+        // const user={
+        //     name:"sriram",
+        //     age:30,
+        //     job:"programmer"
+            
+        // };
+        // console.log(user);
+        // for(let key in user){
+        //     console.log(`${key} :${user[key]}`);
+
+            //using object.keys()
+        //     const user={
+        //     name:"sriram",
+        //     age:30,
+        //     job:"programmer"
+            
+        // };
+        //     const keys=Object.keys(user);
+        //     console.log(keys);
+        //     keys.forEach(key=>{
+        //        console.log(`${key} :${user[key]}`); 
+        //     });
+
+            //using object.values()
+
+        //     const user={
+        //     name:"sriram",
+        //     age:30,
+        //     job:"programmer"
+            
+        // };
+        //     const values=Object.values(user);
+        //     console.log(values);
+        //     values.forEach(value=>{
+        //        console.log(`${value}`); 
+        //     });
+            //using object.entries()
+            
+        //      const user={
+        //      name:"sriram",
+        //      age:30,
+        //      job:"programmer"
+            
+        //  };
+            // const entries=Object.entries(user);
+            // console.log(entries);
+            //  entries.forEach(entry=>{
+            //    console.log(`${entry[0]}:${entry[1]}`);
+            // });
+
+        //normal for loop
+
+       const user = {
+    name: "sriram",
+    age: 30,
+    job: "programmer"
+};
+
+const entries = Object.entries(user); // [["name", "sriram"], ["age", 30], ["job", "programmer"]]
+
+for (let i = 0; i < entries.length; i++) {
+    console.log(`${entries[i][0]} : ${entries[i][1]}`);
+}
+
+
+
+
+        
+    </script>
+    
+</body>
+</html>
