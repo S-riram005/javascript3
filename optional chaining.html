@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        /*
+        const user={
+            name:"sriram",
+            address:{
+                city:"madurai",
+            }
+       };
+
+       //option1
+       console.log(user.address?user.address.city:undefined);
+       //option 2
+       console.log(user.address&&user.address.city);
+       //option 3
+       console.log(user.address?.city);
+       //option 4
+       let key="city";
+       console.log(user.address?.[key]);
+       */
+
+       const user_details = {
+  userId: '456',
+  account: {
+    accountNumber: 'AE75457',
+    holder: {
+       profile: {
+        firstName: 'Tutor',
+     lastName: 'Joes',
+         birthDate: '1989-10-12'
+       }
+    }
+  },
+  contact: {
+    address: {
+      city: 'Salem',
+      state: 'Tamil Nadu',
+      country: 'India'
+    },
+    phone: [
+      {
+        type: 'Home',
+        phoneNumber: '4027825'
+      },
+      {
+        type: 'Office',
+        phoneNumber: '9043017679'
+      }
+    ]
+  }
+};
+//console.log(user_details);
+//console.log(user_details.account.holder.profile.birthDate);
+console.log(user_details.account&&user_details.account.holder&&user_details.account.holder.profile&&user_details.account.holder.profile.birthDate);
+console.log(user_details.account?.holder?.profile?.birthDate);
+user_details.name="sriram";
+console.log(user_details);
+
+    </Script>
+    
+</body>
+</html>
