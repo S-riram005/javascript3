@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //array destructing:
+        //before es6
+        /*
+        const numbers=[1,2,3,4,5];
+        const first=numbers[0];
+        const second=numbers[1];
+        const rest=numbers.slice(2);
+        console.log(first);
+        console.log(second);
+        console.log(rest);
+        */
+       //after es6
+       /*
+        const numbers=[1,2,3,4,5];
+        const [first,second,...rest]=numbers;
+       console.log(first);
+        console.log(second);
+       console.log(rest);
+       */
+
+       //object destructing:
+       //before es6
+       /*
+       const person={name:"sriram",age:23,city:"madurai"};
+       const name=person.name;
+       const age=person["age"];
+       const city=person.city;
+       console.log(name);
+       console.log(age);
+       console.log(city);
+       */
+
+       //after destructing:
+        /*
+       const person={name:"sriram",age:23,city:"madurai"};
+       const{name,age,city}=person;
+       console.log(name);
+       console.log(age);
+       console.log(city);
+       */
+
+       //using default values with array
+       /*
+       const numbers=[1,2];
+       const[x,y,z=3]=numbers;
+       console.log(x);
+       console.log(y);
+       console.log(z);
+       */
+        /*
+        const numbers=[1,2,30];
+       const[x,y,z=3]=numbers;
+       console.log(x);
+       console.log(y);
+       console.log(z);
+       */
+
+       //swapping:
+       /*
+
+       let a=1;
+       let b=2;
+       [a,b]=[b,a];
+       console.log(a);
+       console.log(b);
+       */
+
+       //skipping unwanted items:
+       /*
+       const numbers=[1,2,3,4,5];
+       const[first, , ,four,five]=numbers;
+       console.log(first);
+       console.log(four);
+       console.log(five);
+       
+
+       let myObj={a:1,b:2,c:3,d:4,e:5,f:6,g:7};
+       let{a,b, ...rest }=myObj;
+       console.log(a);
+       console.log(b);
+       console.log(rest);
+       */
+        /*
+       const user={
+        name:"sriram",
+        address:{
+            city:"madurai",
+            state:"tamilnadu",
+            country:"india"
+        },
+        };
+        const{
+            name,
+            address:{city,state,country},
+        }=user;
+        console.log(name);
+        console.log(city);
+        console.log(state);
+        console.log(country);
+        */
+        /*
+        const numbers=[1,2,[3,4],[5,6]];
+        const[a,b,[c,d],[e,f]]=numbers;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        console.log(d);
+        console.log(e);
+        console.log(f);
+        */
+
+        const user = [
+  {
+    name: "sriram",
+    address: {
+      city: "madurai",
+      state: "tamilnadu",
+      country: "india"
+    }
+  },
+  {
+    name: "rishi",
+    address: {
+      city: "banglore",
+      state: "tamilnadu",
+      country: "india",
+    }
+  },
+];
+
+const [
+  { name: name1, address: { city: city1 } },
+  { name: name2, address: { city: city2 } },
+] = user;
+
+console.log(name1); // sriram
+console.log(city1); // madurai
+console.log(name2); // rishi
+console.log(city2); // banglore
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
