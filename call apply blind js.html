@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function joes(){
+            console.log(this);
+        }
+        console.log(joes.name);
+        console.log(joes.toString());
+        joes();
+        joes.call();
+
+        // var user_name="sriram";
+        // function welcome(){
+        //     console.log("welcome: "+this.user_name);
+        // }
+        // welcome();
+
+        
+        function welcome(){
+            console.log("welcome: "+this.user_name);
+        }
+        const student={user_name:"sriram"};
+        welcome.call(student);
+
+
+       function total(eng, mat) {
+    console.log(this.user_name + " got " + (eng + mat) + " marks ");
+}
+
+total.call(student, 50, 50);
+
+let subjects=[50,50];
+total.apply(student,subjects);
+
+const fun=total.bind(student,85,85);
+console.log(fun);
+fun();
+
+const person = {
+    firstName: "Tutor",
+    lastName: "Joes",
+    fullName: function () {
+        return this.firstName + " " + this.lastName;
+    }
+};
+
+console.log(person.fullName()); // Tutor Joes
+
+const anotherPerson = {
+    firstName: "Ram",
+    lastName: "Kumar",
+};
+
+console.log(person.fullName.call(anotherPerson)); // Ram Kumar
+
+    </script>
+    
+</body>
+</html>
