@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        /*
+        const object={
+            name:"sriram",
+            age:22,
+            // method:function(){
+            //     console.log("I am mern stack developer");
+        
+            //  method(){
+            //     console.log("I am mern stack developer");
+            // }
+            
+             method:()=>{
+                console.log("I am mern stack developer");
+            }
+        }
+        
+        console.log(object);
+        object.method();
+        */
+
+        var age = 45;
+
+const student = {
+    age: 25,
+    fun1: function () {
+        console.log("Fun 1 :", this.age);
+        console.log("Fun 1 :", this);
+
+        function fun2() {
+            console.log("Fun 2 :", this.age);
+            console.log("Fun 2 :", this);
+        }
+        fun2(); // <-- Call the function
+
+        const fun3 = () => {
+            console.log("Fun 3 :", this.age);
+            console.log("Fun 3 :", this);
+        }
+        fun3();
+    }
+}
+
+student.fun1();
+
+        
+    </Script>
+    
+</body>
+</html>
