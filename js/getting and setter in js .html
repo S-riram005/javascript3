@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        //Example1:Getters and setters with object literals:
+        /*
+        const person={
+            firstName:"Sriram",
+            lastName:"Rajkumar",
+            fullName:function(){
+                return this.firstName+" "+lastName;
+            }
+        };
+        console.log(person);
+        console.log(person.firstName);
+        console.log(person.lastName);
+        */
+        //getter:
+        /*
+        const person={
+            firstName:"Sriram",
+            lastName:"Rajkumar",
+             get fullName(){
+                return this.firstName+" "+lastName;
+            },
+        };
+        console.log(person);
+        console.log(person.firstName);
+        console.log(person.lastName);
+        */
+
+        /*
+
+        const person={
+            firstName:"Sriram",
+            lastName:"Rajkumar",
+             get fullName(){
+                return this.firstName+" "+this.lastName;
+            },
+            set fullName(name){
+                const parts=name.split(" ");
+                this.firstName=parts[0];
+                this.lastName=parts[1];
+            },
+        };
+        console.log(person);
+        console.log(person.firstName);
+        person.firstName="nethranatham";
+        console.log(person.lastName);
+        person.fullName="mukesh Servai"
+        console.log(person.fullName);
+        */
+       /*
+
+        class person{
+            constructor(firstName,lastName){
+                this.firstName=firstName;
+                this.lastName=lastName;
+            }
+
+             get fullName(){
+                return this.firstName+" "+this.lastName;
+            }
+
+            set fullName(name){
+                const parts=name.split(" ");
+                this.firstName=parts[0];
+                this.lastName=parts[1];
+            }
+
+        }
+        const p1=new person("sriram","rajkumar");
+        console.log(p1);
+        console.log(p1.fullName);
+        p1.fullName="mukesh servai";
+        console.log(p1.fullName);
+        */
+
+        /*
+        1.create a class called circle
+        2.radius values a constructor
+        3.getter and setter function called diammeter
+        4.getter area()
+        */
+
+        class Circle {
+    constructor(radius) {
+        this.radius = radius;
+    }
+    get diameter() {
+        return this.radius * 2;
+    }
+    set diameter(diameter) {
+        this.radius = diameter / 2;
+    }
+    get area() {
+        return Math.PI * this.radius * this.radius;
+    }
+}
+
+const myCircle = new Circle(5);
+console.log(myCircle.radius);    // 5
+console.log(myCircle.diameter);  // 10
+console.log(myCircle.area);      // 78.53981633974483
+myCircle.diameter = 12;
+console.log(myCircle.radius);    // 6
+console.log(myCircle.diameter);  // 12
+console.log(myCircle.area);      // 113.09733552923255
+
+
+
+
+    </Script>
+    
+</body>
+</html>
