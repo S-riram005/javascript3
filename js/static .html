@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        class person{
+            constructor(name){
+                this.name=name;
+            }
+            info(){
+                return(this.name);
+            }
+        }
+        const p1=new person("sriram");
+        console.log(p1);
+        */
+        //static method
+        /*
+        class myclass{
+          static  sriram(){
+                console.log(" I am From Static Method");
+
+            }
+        }
+        myclass.sriram();
+        */
+
+        //static method and the varaiable using:
+        /*
+
+        class myclass{
+            static rishi="subramaniyan servai"
+          static  sriram(){
+                console.log(" I am From Static Method");
+
+            }
+        }
+        myclass.sriram();
+        console.log(myclass.rishi);
+        */
+        //utility method
+        /*
+        class MathUtils{
+            static add(a,b){
+                return a+b;
+            }
+            static subtract(a,b){
+                return a-b;
+            }
+            static multiple(a,b){
+                return a*b;
+            }
+            static division(a,b){
+                return a/b;
+            }
+        }
+        console.log(MathUtils.add(50,30));
+        console.log(MathUtils.subtract(50,30));
+        console.log(MathUtils.multiple(50,30));
+        console.log(MathUtils.division(50,30));
+
+        //example 2:singleton pattern
+
+        class Database {
+    static instance = null;
+
+    static getinstance() {
+        if (!Database.instance) {
+            Database.instance = new Database();
+        }
+        return Database.instance;
+    }
+}
+
+const db1 = Database.getinstance();
+const db2 = Database.getinstance();
+console.log(db1 === db2); // true
+*/
+
+//example 3:constants
+
+class Colors {
+    static RED ="#ff0000";
+    static GREEN="#00ff00";
+    static  BLUE="#00ff00"
+
+}
+console.log(Colors.RED);
+console.log(Colors.GREEN);
+console.log(Colors.BLUE);
+
+    </script>
+    
+</body>
+</html>
