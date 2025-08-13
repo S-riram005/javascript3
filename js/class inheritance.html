@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        //ES6
+
+        /*
+        
+        function person(name){
+            this.name=name;
+        }
+        person.prototype.sayHello=function(){
+            console.log("Hello,my name is"+this.name);
+        };
+        var person=new person("sriram");
+        console.log(person);
+        person.sayHello();
+        */
+        
+
+        //ES6
+        /*
+        class person{
+            constructor(name){
+                this.name=name;
+            }
+            sayHello(){
+                            console.log("Hello,my name is"+ this.name);
+
+
+            }
+        }
+        var p1=new person("sriram");
+        console.log(p1);
+        p1.sayHello();
+        */
+
+        //ES5 inheritance
+        /*
+
+         function Person(name) {
+    this.name = name;
+}
+Person.prototype.sayHello = function() {
+    console.log("Hello, my name is " + this.name);
+};
+
+const p1 = new Person("Sriram");
+console.log(p1);
+p1.sayHello();
+
+// Student inherits from Person
+function Student(name, age) {
+    Person.call(this, name); // call Person constructor
+    this.age = age;
+}
+Student.prototype = Object.create(Person.prototype);
+Student.prototype.constructor = Student;
+
+Student.prototype.eligiblity=function(){
+    console.log(
+        this.name+" age is "+this.age+" "+(this.age>=18?"Eligible":"Not Eligible")
+    );
+};
+
+const s1 = new Student("Joes", 35);
+console.log(s1);
+s1.sayHello(); // works — inherited from Person
+s1.eligiblity();
+*/
+//ES6 inheritance js
+class person{
+            constructor(name){
+                this.name=name;
+            }
+            sayHello(){
+                            console.log("Hello,my name is"+ this.name);
+
+
+            }
+        }
+        var p1=new person("sriram");
+        console.log(p1);
+        p1.sayHello();
+
+        class student extends person
+        {
+            constructor(name,age){
+                super(name);
+                this.age=age;
+
+            }
+            eligiblity(){
+                console.log(
+        this.name+" age is "+this.age+" "+(this.age>=18?"Eligible":"Not Eligible")
+    );
+                
+            }
+        }
+        var p1=new student("sriram",22);
+        p1.sayHello();
+        p1.eligiblity();
+
+
+        </script>
+
+    
+</body>
+</html>
