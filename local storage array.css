@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+};
+
+body{
+    font-family: "poppins",sans-serif;
+    background-color: gray;
+}
+
+.container{
+    max-width:500px;
+    background-color: white;
+    margin:0 auto;
+    padding: 20px;
+    border:1px solid white;
+    border-radius: 5px;
+}
+
+h1{
+    text-align: centre;
+    font-weight: 500;
+    font-size: 18px;
+    color:crimson;
+    text-transform:uppercase;
+}
+
+h2{
+    font-size: 16px;
+    font-weight: 500;
+    color:chocolate;
+    margin-bottom: 10px;
+}
+
+label,
+input{
+    display: block;
+    margin-bottom: 5px;
+}
+
+button{
+    padding: 3px 6px;
+}
+
+#output{
+    border-top: 1px solid white;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+#datalist{
+    list-style-type: none;
+}
+
+#datalist li{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
