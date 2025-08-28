@@ -1,3 +1,4 @@
+
 const btn=document.getElementById("btn");
 const output=document.getElementById("output");
 btn.addEventListener("click",getpost);
@@ -23,7 +24,7 @@ function getpost(){
         console.error(error);
     });
 }
-
+    
 
 
 async function fetchPost() {
@@ -51,3 +52,4 @@ async function fetchPost() {
 
 // Correct event listener
 btn.addEventListener("click", fetchPost);
+
