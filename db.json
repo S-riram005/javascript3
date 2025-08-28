@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Sriram",
+    "age": 24,
+    "city": "Madurai",
+    "skills": ["JavaScript", "HTML", "CSS", "React"]
+  },
+  {
+    "id": 2,
+    "name": "Mahi",
+    "age": 23,
+    "city": "Chennai",
+    "skills": ["Python", "Django", "Machine Learning"]
+  },
+  {
+    "id": 3,
+    "name": "Arun",
+    "age": 25,
+    "city": "Coimbatore",
+    "skills": ["Node.js", "Express", "MongoDB"]
+  }
+]

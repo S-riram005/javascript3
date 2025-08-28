@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMLHttpRequest JSON Example</title>
+</head>
+<body>
+    <h3>XMLHttpRequest in JavaScript - Read JSON File</h3>
+    <button id="btn">Get Data</button>
+    <div id="output"></div>
+
+    <script>
+        const btn = document.getElementById("btn");
+        const output = document.getElementById("output");
+
+        function loadFile() {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "db.json", true);
+
+            // when request loads successfully
+            xhr.onload = function() {
+                if (this.status === 200) {
+                    // parse JSON
+                    const data = JSON.parse(this.responseText);
+                    console.log(data);
+
+                    // loop through array
+                    data.forEach(user => {
+                        output.innerHTML += `
+                            <div style="border:1px solid #ccc; padding:10px; margin:10px 0;">
+                                <h4>${user.name} (${user.age} yrs)</h4>
+                                <p>City: ${user.city}</p>
+                                <p>Skills: ${user.skills.join(", ")}</p>
+                            </div>
+                        `;
+                    });
+                } else {
+                    console.error(`HTTP Error: ${this.status} - ${this.statusText}`);
+                }
+            };
+
+            // track progress
+            xhr.onprogress = function() {
+                console.log("onprogress Ready State:", xhr.readyState);
+            };
+
+            // handle error
+            xhr.onerror = function() {
+                console.error("Request Error: Network issues or invalid URL.");
+            };
+
+            xhr.send(); // send request
+        }
+
+        btn.addEventListener("click", loadFile);
+    </script>
+</body>
+</html>
