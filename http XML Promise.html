@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMLHttpRequest JSON with Promise</title>
+    <style>
+        .user-card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h2>XMLHttpRequest in JavaScript - Read JSON File using Promise</h2>
+    <button id="btn">Get Data</button>
+    <div id="output"></div>
+
+    <script>
+        const btn = document.getElementById("btn");
+        const output = document.getElementById("output");
+
+        function loadFileWithPromise(url) {
+            return new Promise((resolve, reject) => {
+                const xhr = new XMLHttpRequest();
+                xhr.open("GET", url, true);
+                xhr.responseType = "json";
+
+                xhr.onload = function() {
+                    if (xhr.status === 200) {
+                        resolve(xhr.response); // already parsed JSON
+                    } else {
+                        reject(new Error(`HTTP Error: ${xhr.status} - ${xhr.statusText}`));
+                    }
+                };
+
+                xhr.onerror = function() {
+                    reject(new Error("Request Error: Network issue or invalid URL"));
+                };
+
+                xhr.send();
+            });
+        }
+
+        btn.addEventListener("click", () => {
+            const url = "https://jsonplaceholder.typicode.com/users";
+            loadFileWithPromise(url)
+                .then((data) => {
+                    output.innerHTML = ""; // clear previous output
+                    // data is an array, loop directly
+                    data.forEach(user => {
+                        output.innerHTML += `
+                            <div class="user-card">
+                                <h4>${user.name} (${user.username})</h4>
+                                <p><strong>Email:</strong> ${user.email}</p>
+                                <p><strong>City:</strong> ${user.address?.city || "N/A"}</p>
+                                <p><strong>Phone:</strong> ${user.phone}</p>
+                                <p><strong>Website:</strong> ${user.website}</p>
+                                <p><strong>Company:</strong> ${user.company?.name || "N/A"}</p>
+                            </div>
+                        `;
+                    });
+                })
+                .catch(error => {
+                    console.error(error);
+                    output.innerHTML = `<p style="color:red;">${error.message}</p>`;
+                });
+        });
+    </script>
+</body>
+</html>
