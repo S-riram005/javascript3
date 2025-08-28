@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>XMLHttpRequest Example</title>
+</head>
+<body>
+    <button id="btn">Load File</button>
+
+    <script>
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener("click", loadFile);
+
+        function loadFile() {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "sample.txt", true);
+
+            console.log("Ready state initially: ", xhr.readyState);
+
+            xhr.onreadystatechange = function () {
+                console.log("Ready state: ", xhr.readyState);
+                if (xhr.readyState === 4) {   // request finished
+                    if (xhr.status === 200) {
+                        document.write(xhr.responseText);
+                    } else {
+                        console.error(`Error: ${xhr.status} - ${xhr.statusText}`);
+                    }
+                }
+            };
+
+            xhr.send(); // send request
+        }
+    </script>
+</body>
+</html>
