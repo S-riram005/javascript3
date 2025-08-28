@@ -164,4 +164,19 @@ for (let person of people) {
 
 console.log(peopleByAge);
 
+//3.implementing a frequency counter
+function frequencyCounter(arr){
+    const map = new Map();
+    for(let i = 0; i < arr.length; i++){
+        const element = arr[i];
+        map.set(element, (map.get(element) || 0) + 1);
+    }
+    return map;
+}
+
+const array = [1,2,3,1,2,2,4];
+console.log(frequencyCounter(array));
+const array2=[1,54,1,52];
+console.log(frequencyCounter(array2));
+
 
