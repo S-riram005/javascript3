@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <ul>
+        <li>Write the function createCounter</li>
+        <li>Implement the methods increment, decrement, and getcount within the function</li>
+    </ul>
+    <script>
+
+    
+        function createCounter(){
+            let count=0;
+            return {
+                increment: ()=> ++count,
+                decrement: ()=> --count,
+                getcount: ()=> count,
+            };
+        }
+
+        const counter = createCounter();
+
+        console.log(counter.getcount());  
+        console.log(counter.increment());  
+        console.log(counter.increment()); 
+        console.log(counter.getcount());   
+        console.log(counter.decrement()); 
+       
+    </Script>
+    
+</body>
+</html>
