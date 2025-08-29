@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <p>A closure in javascript is a function that remembers and can access varaiable
+        from its outer scope,even after that outer function has finished executing
+    </p> 
+    <script>
+        
+
+        function outer(){
+            let count=0;
+            return++count;
+        }
+        console.log(outer());
+    
+        function outer(){
+            let count=0;
+            function inner(){
+            return ++count;
+            }
+            return inner;
+        }
+        const innerFunction=outer();
+        console.log(innerFunction());
+        
+
+
+    
+    </script>
+
+    
+</body>
+</html>
