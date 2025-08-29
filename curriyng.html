@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>currying</h4>
+    <script>
+        /*
+        function add(a,b,c){
+            return a+b+c;
+        }
+        console.log(add(1,2,3));
+        */
+        /*
+        function add(a){
+            return function(b){
+                return function(c){
+                    return a+b+c;
+                };
+            };
+        }
+        console.log(add(1));
+        console.log(add(1)(2));
+        console.log(add(1)(2)(3));
+        */
+
+       function validateInput(minLength) {
+    return function(maxLength) {
+        return function(input) {
+            if (input.length < minLength) return `Input too short. Minimum is ${minLength}`;
+            if (input.length > maxLength) return `Input too long. Maximum is ${maxLength}`;
+            return "Valid input";
+        };
+    };
+}
+
+// Example usage:
+const validate = validateInput(3)(10);
+console.log(validate("Hello")); // Valid input
+console.log(validate("Hi"));    // Input too short. Minimum is 3
+console.log(validate("Hello World! This is too long")); // Input too long. Maximum is 10
+
+        
+
+    </script>
+</body>
+</html>
