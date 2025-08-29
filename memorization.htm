@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //memorization
+        /*
+        function factorial(n){
+            console.log("Function Running");
+            let fact=1;
+            for(let i=1;i<=n;i++){
+                fact=fact*i;
+            }
+            return fact;
+        }
+            */
+
+        function memoize(fn){
+            const cache={};
+            return function(n){
+                console.log("cache: ",cache);
+                const key=n;
+                if(cache[key]){
+                    console.log("Data Already Found");
+                    return cache[key];
+                }
+                const result=fn(n);
+                cache[key]=result;
+                return result;
+
+            };
+
+        };
+
+        const factorial=memoize(function(n){
+            console.log("Function Running");
+            let fact=1;
+            for(let i=1;i<=n;i++){
+                fact=fact*i;
+            }
+            return fact;
+        });
+
+
+
+        console.log(factorial(5));
+        console.log(factorial(5));
+        console.log(factorial(5));
+        
+    </script>
+</body>
+</html>
