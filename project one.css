@@ -1,0 +1,138 @@
+html{
+    font-size: 12px;
+}
+body{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   background: linear-gradient(
+                  rgba(0, 0, 0, 0.5), 
+                  rgba(0, 0, 0, 0.5)   
+               ),
+               url('assets/download.png');
+               color: #fff;
+               background-size:cover;
+               background-position: center;
+               
+}
+
+.counter{
+    display: flex;
+    border: 1px solid rgba(255,255,255,0.5);
+    padding: 10px;
+}
+
+.my-image {
+    width: 200px;       
+    height: auto;       
+    display: block;     
+    margin: 20px auto;  
+    border-radius: 10px; 
+}
+
+body>h2{
+    font-weight: 1.5rem;
+    font-weight: 500;
+    margin:15px 0px;
+}
+
+body>p{
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+.counter .box{
+    width:80px;
+    height:70px;
+    text-align: center;
+    margin-right: 10px;
+    position: relative;
+}
+
+.counter .box::after{
+    content:":";
+    height:70px;
+    width: 10px;
+    position: absolute;
+    top:0;
+    right:0;
+    font-size: 2.5rem;
+}
+
+.counter.box:last-of-type::after{
+    display: none;
+}
+
+.counter.box h2{
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.form{
+    margin-top:20px;
+}
+
+.form input[type="text"]{
+    width: 230px;
+    padding:10px;
+    outline:none;
+    border:1px solid rgba(255,255,255,0.5);
+    background-color: transparent;
+    border-radius: 5px;
+    color:white;
+}
+
+.form input[type="text"]::placeholder{
+    color:rgba(255,255,255,0.7);
+}
+
+.form button{
+    width:120px;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    margin-left: 10px;
+    background-color: cornflowerblue;
+    color:#fff;
+
+}
+
+@media(min-width:576px){
+    html{
+        font-size: 18px;
+    }
+    .counter .box{
+        width: 100px;
+        height:100px;
+    }
+    .form input[type="text"]{
+        width:300px;
+    }
+
+}
+
+
+@media(min-width:768px){
+    html{
+        font-size: 20px;
+    }
+    .counter .box{
+        width:110px;
+        height:110px;
+    }
+    .form input[type="text"]{
+        width:340px;
+    }
+}
+
+.full-screen-image {
+    position: fixed;       /* Fix it to the viewport */
+    top: 0;                /* Start from top */
+    left: 0;               /* Start from left */
+    width: 100vw;          /* Full viewport width */
+    height: 100vh;         /* Full viewport height */
+    object-fit: cover;     /* Cover entire area, crop if needed */
+    z-index: -1;           /* Keep it behind other content */
+}
