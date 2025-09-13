@@ -22,7 +22,8 @@ btnStart.addEventListener('click',()=>{
         hrs++;
         min=0;
     }
-    updateDisplay();
+    
+    Display();
     },10)
 });
 
